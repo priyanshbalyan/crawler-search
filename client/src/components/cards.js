@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardContent, Typography } from '@material-ui/core';
+import { Card, CardContent, Typography, Link } from '@material-ui/core';
 
 
 class Cards extends Component{
@@ -15,7 +15,7 @@ class Cards extends Component{
             {rows.map(r=>{
               return (<Card style={{margin:5}} key={r.title}>
                 <CardContent>
-                  <Typography variant="h5" component="h2">{r.title}</Typography>
+                  <Link href={"https://github.com" + r.link}><Typography variant="h5" component="h2">{r.title}</Typography></Link>
                   <Typography component="p">{r.description}</Typography>
                 </CardContent>
                 <CardContent>

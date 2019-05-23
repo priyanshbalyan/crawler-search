@@ -25,7 +25,7 @@ class Home extends Component {
 
     search(){
         this.setState({loading:true, rows:[]});
-        axios.post('http://localhost:3001/search?text='+this.state.search).then(resp=>{
+        axios.post('/search?text='+this.state.search).then(resp=>{
             // console.log(resp.data)
             this.setState({loading:false, rows:resp.data.data});
         }).catch(err=>{
