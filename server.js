@@ -18,7 +18,7 @@ mongoose.connect(url, { useNewUrlParser:true, useCreateIndex:true });
 let db = mongoose.connection;
 db.once('open', ()=> {
     console.log("connected to the database");
-    // populate();
+    populate();
 });
 db.on('error', err=> console.log("MONGODB ERROR:",err.message));
 
